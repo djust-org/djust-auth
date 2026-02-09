@@ -1,0 +1,11 @@
+{% if oauth_providers %}
+<div class="space-y-2">
+    {% for provider in oauth_providers %}
+    <a href="{{ provider.login_url }}"
+       class="w-full flex items-center justify-center gap-3 bg-secondary border border-border/30 rounded-lg px-4 py-2.5 text-secondary-foreground hover:bg-accent hover:text-accent-foreground transition-colors font-medium text-sm">
+        {{ provider.icon }}
+        Continue with {{ provider.label }}
+    </a>
+    {% endfor %}
+</div>
+{% endif %}
