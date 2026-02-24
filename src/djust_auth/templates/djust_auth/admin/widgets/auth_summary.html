@@ -1,0 +1,26 @@
+<div class="grid grid-cols-3 gap-4">
+    <div>
+        <p class="text-2xl font-bold text-gray-900">{{ total_users }}</p>
+        <p class="text-sm text-gray-500">Total Users</p>
+    </div>
+    <div>
+        <p class="text-2xl font-bold text-gray-900">{{ recent_signups }}</p>
+        <p class="text-sm text-gray-500">New (7 days)</p>
+    </div>
+    <div>
+        <p class="text-2xl font-bold text-gray-900">{{ staff_users }}</p>
+        <p class="text-sm text-gray-500">Staff</p>
+    </div>
+    <div>
+        <p class="text-2xl font-bold text-gray-900">{{ superusers }}</p>
+        <p class="text-sm text-gray-500">Superusers</p>
+    </div>
+    <div>
+        <p class="text-2xl font-bold {% if oauth_users > 0 %}text-indigo-600{% else %}text-gray-400{% endif %}">{{ oauth_users }}</p>
+        <p class="text-sm text-gray-500">OAuth Users</p>
+    </div>
+    <div>
+        <p class="text-2xl font-bold {% if oauth_providers > 0 %}text-green-600{% else %}text-gray-400{% endif %}">{{ oauth_providers }}</p>
+        <p class="text-sm text-gray-500">OAuth Providers</p>
+    </div>
+</div>
